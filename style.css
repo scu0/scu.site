@@ -1,0 +1,271 @@
+/* ---------- Global Styles ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f8f9fa;
+}
+
+h1, h2, h3, h4 {
+  color: #111;
+  margin-bottom: 12px;
+}
+
+p, li, label {
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin: 60px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ---------- Header & Nav ---------- */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand .logo {
+  background: #ffcc00;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+.navlinks {
+  display: flex;
+  gap: 20px;
+}
+
+.nav {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav:hover {
+  color: #ffcc00;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ---------- Buttons ---------- */
+.cta, .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #004080;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cta:hover, .btn:hover {
+  background: #003366;
+}
+
+.cta.outline {
+  background: transparent;
+  border: 2px solid #004080;
+  color: #004080;
+}
+
+.cta.outline:hover {
+  background: #004080;
+  color: #fff;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ---------- Forms ---------- */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+/* ---------- Events ---------- */
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* ---------- Gallery ---------- */
+#gallery .grid img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#gallery .grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Utility ---------- */
+.small {
+  font-size: 0.9rem;
+}
+
+.muted {
+  color: #666;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navlinks {
+    flex-direction: column;
+    gap: 12px;
+    background: #004080;
+    padding: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .events {
+    flex-direction: column;
+  }
+}
+/* Gallery images */
+#gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #bbb;
+}

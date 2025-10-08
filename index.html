@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartCity University</title>
+  <meta name="description" content="Official website of SmartCity University">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <div class="logo">SCU</div>
+        <div>
+          <div style="font-weight:800">SmartCity University</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.9)">
+            Knowledge • Innovation • Community
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="navlinks">
+          <a class="nav" href="#about">About</a>
+          <a class="nav" href="#departments">Departments</a>
+          <a class="nav" href="#admissions">Admissions</a>
+          <a class="nav" href="#gallery">Gallery</a>
+          <a class="nav" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Welcome to SmartCity University</h1>
+        <p class="small">
+          A higher-education institution committed to academic excellence, research, and community impact.
+          Explore programs, apply for admission, and join our vibrant campus life.
+        </p>
+        <p>
+          <a class="cta" href="#admissions">Apply Now</a>
+          <a class="cta outline" href="#contact">Visit Campus</a>
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <h3 style="margin-top:0">Quick facts</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div class="card" style="flex:1;min-width:140px">Programs<br><strong>3</strong></div>         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="card">
+        <h2>About SmartCity University</h2>
+        <p class="muted">
+          Founded to meet the challenges of the future, SmartCity University provides world-class teaching
+          and research in science, arts, engineering and business. Our graduates go on to lead in industry,
+          government and non-profit sectors.
+        </p>
+      </div>
+    </section>
+
+    <!-- Departments -->
+    <section id="departments">
+      <h2>Faculties & Departments</h2>
+      <div class="grid grid-3">
+        <div class="card dept">
+          <h3>Dual Degree MBA</h3>
+        </div>
+        <div class="card dept">
+          <h3>Digital Business and Innovation</h3>
+        </div>
+        <div class="card dept">
+          <h3>Master of Arts(MA) in Leardership And Business Development</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions -->
+    <section id="admissions">
+      <h2>Admissions</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Undergraduate & Postgraduate</h3>
+          <p class="muted">
+            Apply online for degree programs. Entry requirements vary by program — check each department
+            for specific qualifications.
+          </p>
+          <ul class="small">
+            <li>Undergraduate: WAEC/NECO/IB or equivalent</li>
+            <li>Postgraduate: First degree with minimum 2:2 or equivalent</li>
+            <li>International students: IELTS/TOEFL where applicable</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quick apply</h3>
+          <form onsubmit="event.preventDefault(); alert('Application submitted (demo)')">
+            <label class="small">Full name</label>
+            <input type="text" placeholder="Your full name" required>
+            <label class="small">Email</label>
+            <input type="email" placeholder="you@example.com" required>
+            <label class="small">Program</label>
+            <select required>
+              <option>Dual Degree MBA</option>
+              <option>Digital Business and Innovation</option>
+              <option>Master of Arts(MA) in Leardership and Business Development</option>
+            </select>
+            <div style="margin-top:10px">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>Campus Gallery</h2>
+      <div class="grid grid-3">
+        <div class="card"><img src="images/flyer1.jpg" alt="Flyer 1" class="gallery-img"></div>
+    <div class="card"><img src="images/flyer2.png" alt="Flyer 2" class="gallery-img"></div>
+  <div class="card"><img src="images/flyer3.jpeg" alt="Flyer 3" class="gallery-img"></div>
+      </div>
+      <div id="upload-area" class="card" style="margin-top:20px;text-align:center;padding:30px;border:2px dashed #004080;cursor:pointer;">
+        <p>Drag & drop a flyer image here, or click to select</p>
+        <input type="file" id="flyer-upload" accept="image/*" style="display:none;">
+        <img id="flyer-preview" style="max-width:100%;margin-top:15px;display:none;border-radius:10px;" alt="Flyer Preview">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact & Location</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>General enquiries</h3>
+          <p class="small">Email: smartcityelegantglobalventures@gmail.com • Phone:08135381901 08024575070</p>
+          <p class="small">Address: Segun Oni's Former SDP Governorship Campaign office, Opposite AB Foundation Civil Center, Adebayo, Iworoko Rd, Ado Ekiti, Ekiti State, Nigeria.</p>
+        </div>
+        <div class="card">
+          <h3>Send a message</h3>
+          <form onsubmit="event.preventDefault(); alert('Message sent (demo)')">
+            <input placeholder="Your name" required>
+            <input placeholder="Email" required style="margin-top:8px">
+            <textarea rows="3" placeholder="Message" style="margin-top:8px" required></textarea>
+            <div style="margin-top:8px">
+              <button type="submit" class="btn">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+        <div class="muted">© SmartCity University — All rights reserved</div>
+        <div class="muted">Follow: Twitter • Facebook • Instagram</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Lightbox Popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+</body>
+</html>
